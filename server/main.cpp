@@ -19,10 +19,13 @@
 #include "core/CVehicleManager.h"
 #include "core/VehicleDoorState.h"
 
+#include "core_external/ConfigDatabase.hpp"
+
 
 
 int main(int argc, char *argv[])
 {
-	CNetwork::Init(6767);
+	ConfigDatabase::Init("server-config.ini");
+	CNetwork::Init(ConfigDatabase::configport);
 	return 0;
 }
