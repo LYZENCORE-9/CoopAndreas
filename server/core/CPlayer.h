@@ -2,7 +2,7 @@
 
 #ifndef _CPLAYER_H_
 	#define _CPLAYER_H_
-#include <enet/enet.h>
+#include "../thirdparty-libraries/enet/enet.h"
 
 #include "CVector.h"
 #include "CNetwork.h"

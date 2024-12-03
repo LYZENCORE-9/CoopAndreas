@@ -5,7 +5,7 @@
 
 #include <vector>
 #include <algorithm>
-#include <enet/enet.h>
+#include "../thirdparty-libraries/enet/enet.h"
 
 
 class CPacketListener

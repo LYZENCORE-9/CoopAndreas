@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <thread>
 
-#include <enet/enet.h>
+#include "thirdparty-libraries/enet/enet.h"
 
 #include "core/CControllerState.h"
 #include "core/NetworkEntityType.h"

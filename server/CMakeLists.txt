@@ -2,9 +2,10 @@ cmake_minimum_required(VERSION 3.24)
 
 project(CoopAndreasServer)
 
-SET(GCC_COVERAGE_COMPILE_FLAGS "-Wno-deprecated-declarations")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
-
+if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+	SET(GCC_COVERAGE_COMPILE_FLAGS "-Wno-deprecated-declarations")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
+endif()
 
 add_library(CNetwork OBJECT "src/CNetwork.cpp")
 add_library(CPed OBJECT "src/CPed.cpp")
@@ -17,7 +18,7 @@ add_library(ConfigDatabase OBJECT "core_external/ConfigDatabase.cpp")
 
 add_executable(${PROJECT_NAME} main.cpp)
 
-target_link_libraries(${PROJECT_NAME} enet)
+target_link_libraries(${PROJECT_NAME} "${CMAKE_SOURCE_DIR}/build/libenet.a")
 
 
 

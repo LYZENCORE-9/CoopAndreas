@@ -6,7 +6,7 @@
 
 
 #include <cstddef>
-#include <enet/enet.h>
+#include "../thirdparty-libraries/enet/enet.h"
 
 #include "CPacketListener.h"
 
