@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.24)
 
 project(CoopAndreasServer)
 
-if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+if("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU")
 	SET(GCC_COVERAGE_COMPILE_FLAGS "-Wno-deprecated-declarations")
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
 endif()
